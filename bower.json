@@ -1,0 +1,16 @@
+{
+  "name": "angular-material-sheet",
+  "description": "Directive that allows GTM style interactions with sliding hierarchical views",
+  "dependencies": {
+    "angular": "^1.*",
+    "angular-animate": "*",
+    "angular-touch": "*",
+    "angular-ui-router": "*",
+    "angular-material": "*",
+    "angular-material-icons": "^0.6.0",
+    "angular-ui-router-anim-in-out": "^1.0.2"
+  },
+  "resolutions": {
+    "angular": "^1.4.8"
+  }
+}

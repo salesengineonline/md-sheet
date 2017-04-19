@@ -1,0 +1,152 @@
+
+md-sheet {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 51;
+  bottom: 0px;
+  right: 0px;
+
+
+
+  md-divider.md-white-theme {
+    border-top-color: #CCC;
+  }
+
+  .md-sheet-toolbar{
+    .md-toolbar-tools{
+      padding-right:0px;
+      p{
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .md-backdrop-animation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #000;
+    opacity: .2;
+  }
+
+  .reveal-wrapper {
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 51;
+    bottom: 0;
+    transition: all .2s;
+
+    @media (max-width: 599px) {
+      &.size-40, &.size-50, &.size-60, &.size-70, &.size-80, &.size-90, &.size-100 {
+        width: 100%;
+      }
+    }
+    @media (min-width: 599px) {
+      &.size-40 {
+        width: 40%;
+      }
+
+      &.size-50 {
+        width: 50%;
+      }
+
+      &.size-60 {
+        width: 60%;
+      }
+
+      &.size-70 {
+        width: 70%;
+      }
+
+      &.size-80 {
+        width: 80%;
+      }
+
+      &.size-90 {
+        width: 90%;
+      }
+
+      &.size-100 {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 599px) {
+      &.sheet-offset-10, &.sheet-offset-20, &.sheet-offset-30, &.sheet-offset-40, &.sheet-offset-50, &.sheet-offset-60, &.sheet-offset-700 {
+        right: 0;
+      }
+    }
+    @media (min-width: 599px) {
+      &.sheet-offset-10 {
+        right: 10%;
+      }
+
+      &.sheet-offset-20 {
+        right: 20%;
+      }
+
+      &.sheet-offset-30 {
+        right: 30%;
+      }
+
+      &.sheet-offset-40 {
+        right: 40%;
+      }
+
+      &.sheet-offset-50 {
+        right: 50%;
+      }
+
+      &.sheet-offset-60 {
+        right: 60%;
+      }
+
+      &.sheet-offset-70 {
+        right: 70%;
+      }
+    }
+
+    .reveal-container {
+      width: 100%;
+    }
+  }
+}
+
+
+.anim-in-out{
+
+  &.anim-in-setup{
+    .reveal-wrapper{
+      transform: translateX(100%);
+    }
+    .md-backdrop-animation{
+      opacity: 0;
+    }
+  }
+
+  &.anim-in{
+    transition: all .3s !important;
+    .reveal-wrapper{
+      transform: translateX(0%);
+    }
+    .md-backdrop-animation{
+      opacity: .2;
+    }
+  }
+
+  &.anim-out{
+    transition: all .3s !important;;
+    .reveal-wrapper{
+      transform: translateX(100%);
+    }
+    .md-backdrop-animation{
+      opacity: 0;
+    }
+  }
+}
+
